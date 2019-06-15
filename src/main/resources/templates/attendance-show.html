@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employee Management System</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- CSS Code -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="layout-wrapper inner-wrapper">
+			<div class="container">
+				<a href="https://hemrajinfocom.com/"><img src="images/logo.png" alt="Logo" class="logo"></a>
+				<div class="details-holder">
+					<h3>Employee Menu</h3>
+					<ul>
+						<li><a href="dailyRegister">Daily Register</a></li>
+<!-- 						<li><a href="breakRegister">Break Register</a></li> -->
+						<li><a href="attendanceHistory">Attendance history</a></li>						
+						<!-- 
+						<li><a href="leave-application.html">Leave application</a></li>
+						<li><a href="contact-admin.html">Contact admin</a></li>
+						 -->
+						<li th:if="${employee.userType == 'manager'}"><a href="showAllAttendances">Show All Attendance</a></li>
+						<li th:if="${employee.userType == 'manager'}"><a href="employeeRegister">Employee Registration</a></li>
+						<li class="active"><a href="profile">My profile</a></li>
+						<li><a href="logout">Logout</a></li>
+					</ul>
+					
+					<form action="searchAttendance" method="post">
+						<select name="employeeName">
+						  <option value="anindya">Anindya Das</option>
+						  <option value="avikb">Avik Bhattacharya</option>
+						  <option value="debarghya">Debarghya Palit</option>
+						</select>
+						<select name="month">
+							<option value=1>January</option>
+							<option value=2>February</option>
+							<option value=3>March</option>
+							<option value=4>April</option>
+							<option value=5>May</option>
+							<option value=6>June</option>
+							<option value=7>July</option>
+							<option value=8>August</option>
+							<option value=9>September</option>
+							<option value=10>October</option>
+							<option value=11>November</option>
+							<option value=12>December</option>
+						</select>
+						<input type="submit" value="Search">
+					</form>
+					<form action="showAttendanceWorkingDate" method="post">
+						<input type="date" name="workingDate">
+						<input type="submit" value="Search">
+					</form>
+<!-- 					<form class="filter"> -->
+<!-- 						<div class="row"> -->
+<!-- 							<div class="col-sm-6"> -->
+<!-- 								<div class="row"> -->
+<!-- 									<span>From:</span> -->
+<!-- 									<div class="col-sm-6"> -->
+<!-- 										 <select class="month"> -->
+<!-- 										  <option value="">Jan</option> -->
+<!-- 										  <option value="">Feb</option> -->
+<!-- 										  <option value="">Mar</option> -->
+<!-- 										  <option value="">Apr</option> -->
+<!-- 										  <option value="">May</option> -->
+<!-- 										  <option value="">Jun</option> -->
+<!-- 										  <option value="">Jul</option> -->
+<!-- 										  <option value="">Aug</option> -->
+<!-- 										  <option value="">Sep</option> -->
+<!-- 										  <option value="">Oct</option> -->
+<!-- 										  <option value="">Nov</option> -->
+<!-- 										  <option value="">Dec</option> -->
+<!-- 										</select>  -->
+<!-- 									</div> -->
+<!-- 									<div class="col-sm-6"> -->
+<!-- 										<select class="year"> -->
+<!-- 										  <option value="">2018</option> -->
+<!-- 										  <option value="">2019</option> -->
+<!-- 										  <option value="">2020</option> -->
+<!-- 										  <option value="">2021</option> -->
+<!-- 										  <option value="">2022</option> -->
+<!-- 										  <option value="">2023</option> -->
+<!-- 										  <option value="">2024</option> -->
+<!-- 										  <option value="">2025</option> -->
+<!-- 										  <option value="">2026</option> -->
+<!-- 										  <option value="">2027</option> -->
+<!-- 										  <option value="">2028</option> -->
+<!-- 										  <option value="">2029</option> -->
+<!-- 										  <option value="">2030</option> -->
+<!-- 										</select>  -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 							<div class="col-sm-6"> -->
+<!-- 								<div class="row"> -->
+<!-- 									<span>To:</span> -->
+<!-- 									<div class="col-sm-6"> -->
+<!-- 										 <select class="month"> -->
+<!-- 										  <option value="">Jan</option> -->
+<!-- 										  <option value="">Feb</option> -->
+<!-- 										  <option value="">Mar</option> -->
+<!-- 										  <option value="">Apr</option> -->
+<!-- 										  <option value="">May</option> -->
+<!-- 										  <option value="">Jun</option> -->
+<!-- 										  <option value="">Jul</option> -->
+<!-- 										  <option value="">Aug</option> -->
+<!-- 										  <option value="">Sep</option> -->
+<!-- 										  <option value="">Oct</option> -->
+<!-- 										  <option value="">Nov</option> -->
+<!-- 										  <option value="">Dec</option> -->
+<!-- 										</select>  -->
+<!-- 									</div> -->
+<!-- 									<div class="col-sm-6"> -->
+<!-- 										<select class="year"> -->
+<!-- 										  <option value="">2018</option> -->
+<!-- 										  <option value="">2019</option> -->
+<!-- 										  <option value="">2020</option> -->
+<!-- 										  <option value="">2021</option> -->
+<!-- 										  <option value="">2022</option> -->
+<!-- 										  <option value="">2023</option> -->
+<!-- 										  <option value="">2024</option> -->
+<!-- 										  <option value="">2025</option> -->
+<!-- 										  <option value="">2026</option> -->
+<!-- 										  <option value="">2027</option> -->
+<!-- 										  <option value="">2028</option> -->
+<!-- 										  <option value="">2029</option> -->
+<!-- 										  <option value="">2030</option> -->
+<!-- 										</select>  -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 							<button class="sbmt-btn">Submit</button> -->
+<!-- 						</div> -->
+<!-- 					</form> -->
+					<div class="table-details table-responsive">
+					<h3 class="mrgn-tp30">Attendance Register</h3>
+					<h4 th:text=${employeeName}></h4>
+					<table class="table">
+					    <thead>
+					    	<tr>
+					      		<th>Working Date</th>
+					        	<th>In Time</th>
+					        	<th>Total Break Time</th>
+					        	<th>Out Time</th>
+					        	<th>Total Time</th>
+					        	<th>Working Time</th>
+					      	</tr>
+					    </thead>
+					    <tbody>
+					    	<tr th:each="attendance : ${attendances}">
+								<td th:text=${attendance.workingDate}></td>
+								<td th:text=${attendance.inTime}></td>
+								<td th:text=${attendance.breakTime}></td>
+								<td th:text=${attendance.outTime}></td>
+								<td th:text=${attendance.totalTime}></td>
+								<td th:text=${attendance.workingTime}></td>
+							</tr>
+					    </tbody>
+					  </table>
+					  <!-- 
+					  <h3 class="mrgn-tp30">Break Register</h3>
+					  	<a href="breakStart">Start Break</a>
+						<a href="breakEnd">Break End</a>
+					  <table class="table">
+					    <thead>
+					    	<tr>
+					      		<th>Break Start</th>
+					        	<th>Break End</th>
+					        	<th>Break Time</th>
+					      	</tr>
+					    </thead>
+					    <tbody>
+					    	<tr th:each="break : ${breaks}">
+								<td th:text=${break.breakStart}></td>
+								<td th:text=${break.breakEnd}></td>
+								<td th:text=${break.breakTime}></td>
+							</tr>
+					    </tbody>
+					  </table>
+					   -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+   setInterval(function(){ 
+   // toggle the class every five second
+   $('.female').toggleClass('show');  
+   setTimeout(function(){
+     // toggle back after 1 second
+     $('.female').toggleClass('hide');  
+   },1000)
+
+},1000);
+	});
+</script>
+<!-- 
+
+	<h3 th:text="${value}"></h3>
+	<a href="attendanceIn">In Time</a>
+	<a href="attendanceOut">Out Time</a>
+	<table border=1>
+		<tr>
+			<td>Working Date</td>
+			<td>In Time</td>
+			<td>Out Time</td>
+		</tr>
+		<tr th:each="attendance : ${attendances}">
+			<td th:text=${attendance.workingDate}></td>
+			<td th:text=${attendance.inTime}></td>
+			<td th:text=${attendance.outTime}></td>
+		</tr>
+	</table>
+	 -->
+	
+</body>
+</html>

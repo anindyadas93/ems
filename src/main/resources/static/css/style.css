@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+h1{font-size: 40px; color: #000; padding: 10px 50px; display: table; margin: 0 auto; float: left; margin: 0 0 80px; font-family: 'Nunito', sans-serif;}
+h2{color: #000;clear: both; padding: 0 0 30px; font-family: 'Nunito', sans-serif;}
+h3{ font-family: 'Nunito', sans-serif; font-weight: bold;}
+p{clear: both; color: #000; font-family: 'Nunito', sans-serif;}
+
+.mrgn-tp30{margin-top: 60px !important;}
+.center{text-align: center;}
+.table-responsive{overflow-x: hidden;}
+.layout-wrapper {
+    padding: 55px 0; 
+    margin: 0; 
+    float: left; 
+    width: 100%; 
+    background: url("../images/land-bkg.jpg") no-repeat center top fixed; 
+    height: 100%; 
+    background-size: cover; 
+}
+.inner-wrapper{
+  height: auto;
+}
+.details-holder{
+    margin: 40px auto 0;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.6);
+    padding: 20px;
+    float: left;
+}
+.details-holder .pull-right{
+  margin: 50px 0 0;
+}
+.logo{
+  float: left;
+}
+.tips-holder{
+  float: right;
+  width: 60%;
+}
+.tips-holder h3{
+  margin: 0;
+  float: left;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+}
+.form-holder {
+    margin: 0;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    padding: 10px;
+    float: right;
+}
+.modal-header .close{
+  text-align: right;
+}
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 0 auto 120px;
+    position: relative;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 25%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0; right: 0; margin: 0 auto; top: 0; 
+    transition: 1s all;
+}
+.hide{
+  transition: 1s all;
+  opacity: 0 !important;
+}
+.show{
+  transition: 1s all;
+  opacity: 1 !important;
+}
+/* Full-width input fields */
+input[type=text], input[type=password], select, textarea, input[type=email] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+textarea{
+  height: 100px;
+}
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+/* Set a style for all buttons */
+button {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px 18px;
+    margin: 8px 4px 8px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    opacity: 0.9;
+    float: left;
+    background: rgba(34,56,81,1);
+    background: -moz-linear-gradient(45deg, rgba(34,56,81,1) 0%, rgba(21,31,49,1) 64%, rgba(21,31,49,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(34,56,81,1)), color-stop(64%, rgba(21,31,49,1)), color-stop(100%, rgba(21,31,49,1)));
+    background: -webkit-linear-gradient(45deg, rgba(34,56,81,1) 0%, rgba(21,31,49,1) 64%, rgba(21,31,49,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(34,56,81,1) 0%, rgba(21,31,49,1) 64%, rgba(21,31,49,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(34,56,81,1) 0%, rgba(21,31,49,1) 64%, rgba(21,31,49,1) 100%);
+    background: linear-gradient(45deg, rgba(34,56,81,1) 0%, rgba(21,31,49,1) 64%, rgba(21,31,49,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223851', endColorstr='#151f31', GradientType=1 );}
+
+}
+button:hover {
+    opacity:1;
+    color: white;
+    text-decoration: none;
+}
+.signupbtn {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px 18px;
+    margin: 8px 4px 8px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    opacity: 0.9;
+    float: left;
+    background: rgba(34,56,81,1);
+    background: -moz-linear-gradient(45deg, rgba(34,56,81,1) 0%, rgba(21,31,49,1) 64%, rgba(21,31,49,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(34,56,81,1)), color-stop(64%, rgba(21,31,49,1)), color-stop(100%, rgba(21,31,49,1)));
+    background: -webkit-linear-gradient(45deg, rgba(34,56,81,1) 0%, rgba(21,31,49,1) 64%, rgba(21,31,49,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(34,56,81,1) 0%, rgba(21,31,49,1) 64%, rgba(21,31,49,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(34,56,81,1) 0%, rgba(21,31,49,1) 64%, rgba(21,31,49,1) 100%);
+    background: linear-gradient(45deg, rgba(34,56,81,1) 0%, rgba(21,31,49,1) 64%, rgba(21,31,49,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223851', endColorstr='#151f31', GradientType=1 );}
+
+}
+.signupbtn:hover {
+    opacity:1;
+    color: white;
+    text-decoration: none;
+}
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    float: left;
+}
+.smll-btn-holder{width: 45%; display: table;}
+/* The "Forgot password" text */
+span.psw {
+    text-align: left;
+    padding-top: 16px;
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.contact-btn {
+  position: fixed; 
+  right: -80px;
+  top: 50%; 
+  z-index: 1000;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg); 
+  -o-transform: rotate(-90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  font-size: 20px;
+}
+
+.details-holder ul{padding: 0; margin: 0 auto; display: table; width: auto;}
+.details-holder ul li{padding: 0; margin: 0 10px; display: inline; position: relative; font-size: 16px; }
+.details-holder ul li:after{position: absolute; right: -14px; width: 2px; height: 18px; background: #000; content: ''; top: 0;}
+.details-holder ul li:last-child:after{display: none;}
+.details-holder ul li a{color: #000; font-family: 'Nunito', sans-serif;}
+.details-holder h3{color: #addf4a; background: #262f3e; display: table; margin: 0 auto 20px; padding: 10px;}
+
+.filter span{float: left; width: 100%; padding: 0 15px; font-weight: bold; font-family: 'Nunito', sans-serif;}
+.filter select{padding: 10px;  border: 1px solid; background: #262f3e; color: #addf4a;}
+.table-details{height: 400px; overflow-y: scroll; overflow-x: hidden;}
+.table th{color: #000; font-family: 'Nunito', sans-serif; font-size: 18px; }
+.table td{color: #000; font-family: 'Nunito', sans-serif; font-size: 16px; line-height: 56px;}
+
+.employee-details{width: 100%; float: left; text-align: center;}
+.employee-details h4{color: #000; font-weight: bold;}
+.employee-details span{float: left; width: 100%; padding: 0 15px; font-weight: bold; font-family: 'Nunito', sans-serif;}
+.employee-details select{padding: 10px;  border: 1px solid; background: #262f3e; color: #addf4a; width: 50%; display: block; margin: 0 auto 30px;}
+.employee-details textarea{padding: 10px;  border: 1px solid; background: #262f3e; color: #addf4a; width: 50%; display: block; margin: 0 auto 30px;}
+
+
+.working-hours{padding: 0; font-size: 22px; border-bottom: 4px double; display: table; margin: 0 auto 10px;}
+
+.sbmt-btn{display: table; margin: 0 auto 20px; float: none; color: #addf4a; font-weight: bold;}
+
+.employee-photo{width: 100%; float: left; border: 4px double #000; height: 200px; overflow: hidden;}
+.employee-photo img{width: 100%;}
+.employee-personal-details{width: 100%; float: left; border: 4px double #000;}
+.non-center{text-align: left;}

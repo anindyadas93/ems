@@ -1,0 +1,2 @@
+INSERT INTO employee(first_name,last_name,date_of_birth,gender,address,email_id,phone_no,username,password,user_type) VALUES('Anindya','Das','03/02/1993','male','Bhadreswar','anindya@gmail.com','8777595430','anindya','12345','employee');
+INSERT INTO employee(first_name,last_name,date_of_birth,gender,address,email_id,phone_no,username,password,user_type) VALUES('Debarghya','Palit','01/01/1989','male','Kolkata','debarghya@gmail.com','9876543210','debarghya','56789','manager');

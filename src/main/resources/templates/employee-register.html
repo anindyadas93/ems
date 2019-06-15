@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employee Management System</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- CSS Code -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<!--  -->
+<div class="layout-wrapper inner-wrapper">
+			<div class="container">
+				<a href="https://hemrajinfocom.com/"><img src="images/logo.png" alt="Logo" class="logo"></a>
+				<div class="details-holder">
+					<h3>Employee Menu</h3>
+					<ul>
+						<li><a href="dailyRegister">Daily Register</a></li>
+<!-- 						<li><a href="breakRegister">Break Register</a></li> -->
+						<li><a href="attendanceHistory">Attendance history</a></li>						
+						<!-- 
+						<li><a href="leave-application.html">Leave application</a></li>
+						<li><a href="contact-admin.html">Contact admin</a></li>
+						 -->
+						<li><a href="showAllAttendances">Show All Attendance</a></li>
+						<li><a href="employeeRegister">Employee Registration</a></li>
+						<li class="active"><a href="profile">My profile</a></li>
+						<li><a href="logout">Logout</a></li>
+					</ul>
+					<h3 class="mrgn-tp30">My Profile</h3>
+					<div class="employee-details">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="employee-photo">
+									<img src="images/img_avatar2.png" alt="">
+								</div>
+							</div>
+							<div class="col-sm-9">
+								<div class="employee-personal-details">
+									<p>* Details that you provided by the time of your Registration.<br>
+									* Please feel free to contact System Administrator >> for any change.</p>
+									<div class="table-responsive">
+									<form name="employeeregister" action="save" method="post">
+										<table class="table non-center">
+											<tbody>
+												<tr>
+													<td>First Name</td>
+													<td><input type="text" name="firstName"></td>
+												</tr>
+												<tr>
+													<td>Last Name</td>
+													<td><input type="text" name="lastName"></td>
+												</tr>
+												<tr>
+													<td>Date of Birth</td>
+													<td><input type="text" name="dateOfBirth"></td>
+												</tr>
+												<tr>
+													<td>Gender</td>
+													<td><input type="text" name="gender"></td>
+												</tr>
+												<tr>
+													<td>Address</td>
+													<td><input type="text" name="address"></td>
+												</tr>
+												<tr>
+													<td>Email Id</td>
+													<td><input type="text" name="emailId"></td>
+												</tr>
+												<tr>
+													<td>Phone No</td>
+													<td><input type="text" name="phoneNo"></td>
+												</tr>
+												<tr>
+													<td>Username</td>
+													<td><input type="text" name="username"></td>
+												</tr>
+												<tr>
+													<td>Password</td>
+													<td><input type="text" name="password"></td>
+												</tr>
+												<tr>
+													<td>User Type</td>
+													<td>
+														<select name="userType">
+														  <option value="employee" selected>Employee</option>
+														  <option value="manager">Manager</option>
+														  <option value="hr">HR</option>
+														</select>
+													</td>
+												</tr>
+												<tr>
+													<td>&nbsp;</td>
+													<td><input type="submit" value="Register"></td>
+												</tr>
+											</tbody>
+										</table>
+									</form>
+								</div>
+								<!-- 
+									<h3 class="mrgn-tp30">Profile</h3>
+									<p>Change Password</p>
+									<div class="col-sm-12">
+									<form>
+										<input type="password" name="" placeholder="Old Password : ">
+										<input type="password" name="" placeholder="New Password : ">
+										<input type="password" name="" placeholder="Confirm New Password : ">
+										<button class="sbmt-btn">Save</button>
+									</form>
+								 -->
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+   setInterval(function(){ 
+   // toggle the class every five second
+   $('.female').toggleClass('show');  
+   setTimeout(function(){
+     // toggle back after 1 second
+     $('.female').toggleClass('hide');  
+   },1000)
+
+},1000);
+	});
+</script>
+<!--  
+	<h3>Registration</h3>
+	<form action="save" method="post">
+		<table>
+			<tr>
+				<td>First Name</td>
+				<td><input type="text" name="firstName"></td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td><input type="text" name="lastName"></td>
+			</tr>
+			<tr>
+				<td>Date of Birth</td>
+				<td><input type="text" name="dateOfBirth"></td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td><input type="text" name="address"></td>
+			</tr>
+			<tr>
+				<td>Email Id</td>
+				<td><input type="text" name="emailId"></td>
+			</tr>
+			<tr>
+				<td>Phone No</td>
+				<td><input type="text" name="phoneNo"></td>
+			</tr>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="text" name="password"></td>
+			</tr>
+			<tr>
+				<td>User Type</td>
+				<td>
+					<select name="userType">
+					  <option value="employee" selected>Employee</option>
+					  <option value="manager">Manager</option>
+					  <option value="hr">HR</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="submit" value="Register"></td>
+			</tr>
+		</table>
+	</form>
+	-->
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border=1>
+		<tr>
+			<td>Break Start</td>
+			<td>Break End</td>
+			<td>Break Time</td>
+		</tr>
+		<tr th:each="break : ${breaks}">
+			<td th:text=${break.breakStart}></td>
+			<td th:text=${break.breakEnd}></td>
+			<td th:text=${break.breakTime}></td>
+		</tr>
+	</table>
+</body>
+</html>

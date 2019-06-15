@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employee Management System</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- CSS Code -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+	<!--  -->
+	<div class="layout-wrapper">
+		<div class="container">
+				<a href="https://hemrajinfocom.com/"><img src="images/logo.png" alt="Logo" class="logo"></a>
+				<div class="tips-holder">
+					<h3>Tips of the day:: <marquee>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</marquee></h3>
+				</div>
+				<div class="details-holder">
+					<div class="row">
+						<div class="col-sm-5">
+							<div class="form-holder">
+								<!-- The Modal (contains the Sign In form) -->
+								<div class="imgcontainer">
+									<img src="images/img_avatar.png" alt="Avatar" class="avatar male">
+									<img src="images/img_avatar2.png" alt="Avatar" class="avatar female">
+								</div>
+								<form action="loginCheck" method="post">
+									<label for="uname"><b>User Id</b></label>
+									<input type="text" placeholder="Enter User ID" name="username" required>
+
+									<label for="psw"><b>Password</b></label>
+									<input type="password" placeholder="Enter Password" name="password" required>
+
+									<label><input type="submit" value="Login"></label>
+									<h4 th:text="${message}"></h4>
+									<!-- 
+										<label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+										<div class="smll-btn-holder">
+											<a type="submit" class="signupbtn" href="daily-register.html">Login</a>
+										</div>
+									 -->		   
+									
+									<!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+								</form> 
+							</div>
+						</div>
+						<div class="col-sm-6 pull-right">
+							<h2>Welcome...</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+   setInterval(function(){ 
+   // toggle the class every five second
+   $('.female').toggleClass('show');  
+   setTimeout(function(){
+     // toggle back after 1 second
+     $('.female').toggleClass('hide');  
+   },1000)
+
+},1000);
+	});
+</script>
+	<!-- 
+		<form action="loginCheck" method="post">
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="text" name="password"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="submit" value="Login"></td>
+			</tr>
+		</table>
+		<h5 th:text="${message}"></h5>
+	</form>
+	 -->
+</body>
+</html>
